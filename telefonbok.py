@@ -13,3 +13,13 @@ telefonbok.append(person2)
 def vis_alle():
     for person in telefonbok:
         print(f"{person["navn"]}: {person["nummer"]}")
+
+def legg_til():
+    nyttnavn = input("Skriv nytt navn: ")
+    nyttnummer = input("Skriv inn nummer: ")
+    nyttordbok = {
+        "navn": nyttnavn,
+        "nummer": nyttnummer
+    }
+    telefonbok.append(nyttordbok)
+    print(f"{nyttnavn} ble lag til i telefonboka.")
