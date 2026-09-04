@@ -37,3 +37,22 @@ def søk():
         print(f"{søknavn}: {funnetnummer}")
     else:
         print(f"{søknavn} har ikke blitt funnet.")
+
+while True:
+    print("1. Vis alle")
+    print("2. Legg til ny")
+    print("3. Søk")
+    print("4. Avslutt")
+    svar = input("Hva vil du gjøre?")
+    svar.lower()
+    if svar == "1" or svar == "vis":
+        vis_alle()
+    elif svar == "2" or svar == "legg":
+        legg_til()
+    elif svar == "3" or svar == "søk":
+        søk()
+    elif svar == "4" or svar == "stopp":
+        print("Programmet avsluttes.")
+        break
+    else:
+        print("ERROR: Feil kommando.")
