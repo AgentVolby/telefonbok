@@ -23,3 +23,17 @@ def legg_til():
     }
     telefonbok.append(nyttordbok)
     print(f"{nyttnavn} ble lag til i telefonboka.")
+
+def søk():
+    funnet = False
+    søknavn = input("Skriv inn navn du vil søke opp: ")
+    søknavn.lower()
+    funnetnummer = ""
+    for person in telefonbok:
+        if person["navn"] == søknavn:
+            funnet = True
+            funnetnummer = person["nummer"]
+    if funnet:
+        print(f"{søknavn}: {funnetnummer}")
+    else:
+        print(f"{søknavn} har ikke blitt funnet.")
